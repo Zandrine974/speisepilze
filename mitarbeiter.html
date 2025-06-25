@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mitarbeiter</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/mitarbeiter.css">
+
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  </div>
+  <div id="holder">
+    <header>
+      <h1><b>Wer wir sind</b></h1>
+    </header>
+    <nav class="navi">
+      <ul>
+        <li class="index"><a href="index.html">Startseite<br></a></li>
+        <li class="mitarbeiter"><a href="mitarbeiter.html">Mitarbeiter<br></a></li>
+        <li class="reservieren"><a href="#">Reservieren<br></a></li>
+        <li class="kontakt"><a href="#">Kontakt<br></a></li>
+      </ul>
+    </nav>
+    <main id="app">
+      <h1>Mitarbeiter und Mitarbeiterinnen</h1>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th @click="sortierenNach = 'vorname'">Vorname</th>
+              <th @click="sortierenNach = 'nachname'">Nachname</th>
+              <th @click="sortierenNach = 'abteilung'">Abteilung</th>
+              <th @click="sortierenNach = 'nr'">Nr</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(person, index) in sortiertePersonen" :key="index">
+              <td>{{ person.vorname }}</td>
+              <td>{{ person.nachname }}</td>
+              <td>{{ person.abteilung }}</td>
+              <td>{{ person.nr }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <footer id="myFooter" class="fuss">&copy; Sonnenclub GmbH, <span id="currentDate"></span></footer>
+  <script defer>
+    var currentDate = new Date();
+    var options = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    var formattedDate = currentDate.toLocaleDateString('de', options);
+    document.getElementById('currentDate').textContent = formattedDate;
+  </script>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/vue.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

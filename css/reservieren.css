@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  background: #ffffff;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+.kalender {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.kalender th, .kalender td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+.frei {
+  background-color: #d5f5e3; /* grünlich */
+  color: #1e8449;
+}
+
+.besetzt {
+  background-color: #f5b7b1; /* rötlich */
+  color: #922b21;
+}
+
+tr:nth-child(even) {
+  background-color: #f7faff;
+}
+
+.legende {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.legende span {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.frei-box,
+.besetzt-box {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin-right: 0.3rem;
+}
+
+.frei-box {
+  background: #d5f5e3;
+}
+
+.besetzt-box {
+  background: #f5b7b1;
+}
