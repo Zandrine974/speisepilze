@@ -1,50 +1,65 @@
-form {
-  max-width: 500px;
-  margin: 1rem auto;
-  font-family: "Helvetica", Arial, sans-serif;
-  background-color: #f5f9fc;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(42, 122, 226, 0.2);
-}
+/* kontakt.css */
 
-form label {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-  color: #2a4d69;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  margin-bottom: 1rem;
-  border: 1px solid #bbb;
-  border-radius: 6px;
+.kontakt-formular {
+  max-width: 450px;
+  margin: 2rem auto 0;
+  background-color: #f4ead7;
+  padding: 2rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(75, 58, 44, 0.12);
   font-size: 1rem;
-  box-sizing: border-box;
-  font-family: inherit;
+  color: #3b2f2f;
 }
 
-form textarea {
+.kontakt-formular label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 1.2rem;
+}
+
+.kontakt-formular input[type="text"],
+.kontakt-formular input[type="email"],
+.kontakt-formular textarea {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #c07a00;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #3b2f2f;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.kontakt-formular input[type="text"]:focus,
+.kontakt-formular input[type="email"]:focus,
+.kontakt-formular textarea:focus {
+  outline: none;
+  border-color: #556b2f;
+  background-color: #f9f6f1;
+}
+
+.kontakt-formular textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-form button {
-  background-color: #2a7ae2;
-  color: white;
+.kontakt-formular button[type="submit"] {
+  margin-top: 1.8rem;
+  background-color: #556b2f;
+  color: #f9f6f1;
   border: none;
-  padding: 0.7rem 1.4rem;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-weight: 600;
 }
 
-form button:hover {
-  background-color: #1c55b2;
+.kontakt-formular button[type="submit"]:hover,
+.kontakt-formular button[type="submit"]:focus {
+  background-color: #3b2f2f;
+  outline: none;
 }

@@ -1,88 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+
 body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #f9f6f1;
+  color: #3b2f2f;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #fefefe;
-  color: #333;
-  line-height: 1.6;
+}
+
+#holder {
+  max-width: 960px;
+  margin: 2.5rem auto 3rem;
+  padding: 1rem 2rem 3rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(75, 58, 44, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
 }
 
 header {
-  background-color: #91c9c0;
-  color: #fff;
-  padding: 2rem 1rem;
   text-align: center;
-  border-bottom: 5px solid #f4d06f;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #c07a00;
+  user-select: none;
 }
 
 header h1 {
+  font-weight: 800;
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+  color: #556b2f;
   margin: 0;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
 }
 
-.navi ul {
-  list-style: none;
+/* Navigation */
+nav.navi ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 0.5rem;
+  gap: 3rem; /* Abstand zwischen den Nav-Buttons */
+  padding-left: 0;
+  margin: 1.5rem auto 2rem;
+  list-style: none;
+  flex-wrap: nowrap; /* Keine Zeilenumbrüche, alle in einer Reihe */
+  max-width: 700px;
+  user-select: none;
+}
+
+nav.navi li {
   margin: 0;
-  background-color: #e7f6f4;
 }
 
-.navi li {
-  margin: 0.5rem;
-}
-
-.navi a {
-  display: block;
-  padding: 0.75rem 1.25rem;
-  background-color: #ffffff;
-  border: 2px solid #91c9c0;
-  border-radius: 0.7rem;
+nav.navi a {
+  display: inline-block;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #556b2f;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 
-.navi a:hover {
-  background-color: #f4d06f;
-  border-color: #f4d06f;
-  color: #000;
+nav.navi a:hover,
+nav.navi a:focus,
+nav.navi a[aria-current="page"] {
+  border-color: #c07a00;
+  background-color: #f4ead7;
+  outline: none;
 }
 
 main {
-  padding: 2rem;
-  background-color: #ffffff;
-}
-
-footer {
-  background-color: #91c9c0;
-  color: #fff;
+  flex: 1;
+  padding: 0 1rem;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
-  .navi ul {
-    flex-direction: column;
-    align-items: center;
-  }
+main h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #3b2f2f;
+}
 
-  .navi a {
-    width: 100%;
-    text-align: center;
-  }
+main p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  color: #5a4d3b;
+}
 
-  header h1 {
-    font-size: 2rem;
-  }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-  main {
-    padding: 1rem;
-  }
+.feature-card {
+  background-color: #f4ead7;
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem;
+  box-shadow: 0 4px 12px rgba(85, 107, 47, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(85, 107, 47, 0.3);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #556b2f;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #3b2f2f;
+}
+
+footer.fuss {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #7b6c56;
+  user-select: none;
 }

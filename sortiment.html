@@ -3,8 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sortiment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speisepilze - Sortiment</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/sortiment.css" />
@@ -13,26 +18,25 @@
 <body>
   <div id="holder">
     <header>
-      <h1><b>Sortiment</b></h1>
+      <h1>Sortiment</h1>
     </header>
 
-    <nav class="navi">
+    <nav class="navi" role="navigation" aria-label="Hauptnavigation">
       <ul>
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="sortiment.html">Sortiment</a></li>
+        <li><a href="sortiment.html" aria-current="page">Sortiment</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="#">Platzhalter</a></li>
-        <li><a href="#">Platzhalter</a></li>
+        <li><a href="shop.html">Shop</a></li>
       </ul>
     </nav>
 
     <main>
       <h2>Alle Speisepilze auf einen Blick</h2>
+
       <div class="table-container">
-        <table class="produkttabelle">
+        <table>
           <thead>
             <tr>
-              <th>Bild</th>
               <th>Name</th>
               <th>Gattung</th>
               <th>Preis pro Gramm</th>
@@ -41,26 +45,18 @@
           </thead>
           <tbody>
             <tr>
-              <td><img src="https://via.placeholder.com/100" alt="Champignons"></td>
-              <td>Champignons</td>
+              <td>Champignon</td>
               <td>Agaricus</td>
-              <td>0,007 €</td>
-               <td><a href="https://shop.example.com/champignons" target="_blank" rel="noopener">Kaufen</a></td>
+              <td>0,05 €</td>
+              <td><a href="shop.html">Kaufen</a></td>
             </tr>
             <tr>
-              <td><img src="https://via.placeholder.com/100" alt="Steinpilze"></td>
-              <td>Steinpilze</td>
+              <td>Steinpilz</td>
               <td>Boletus</td>
-              <td>0,032 €</td>
-               <td><a href="https://shop.example.com/steinpilze" target="_blank" rel="noopener">Kaufen</a></td>
+              <td>0,15 €</td>
+              <td><a href="shop.html">Kaufen</a></td>
             </tr>
-            <tr>
-              <td><img src="https://via.placeholder.com/100" alt="Austernpilze"></td>
-              <td>Austernpilze</td>
-              <td>Pleurotus</td>
-              <td>0,009 €</td>
-               <td><a href="https://shop.example.com/austernpilze" target="_blank" rel="noopener">Kaufen</a></td>
-            </tr>
+            <!-- Mehr Produkte hier -->
           </tbody>
         </table>
       </div>
@@ -73,8 +69,8 @@
 
   <script>
     const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('de', options);
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    document.getElementById("currentDate").textContent = currentDate.toLocaleDateString("de", options);
   </script>
 </body>
 

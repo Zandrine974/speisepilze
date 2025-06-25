@@ -2,9 +2,11 @@
 <html lang="de">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Startseite – Speisepilze</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speisepilze - Startseite</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -13,27 +15,42 @@
 <body>
   <div id="holder">
     <header>
-      <h1><b>S p e i s e p i l z e</b></h1>
+      <h1>S p e i s e p i l z e</h1>
     </header>
 
-    <nav class="navi">
+    <nav class="navi" role="navigation" aria-label="Hauptnavigation">
       <ul>
-        <li><a href="index.html">Startseite</a></li>
+        <li><a href="index.html" aria-current="page">Startseite</a></li>
         <li><a href="sortiment.html">Sortiment</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="#">Platzhalter</a></li>
-        <li><a href="#">Platzhalter</a></li>
+        <li><a href="shop.html">Shop</a></li>
       </ul>
     </nav>
 
     <main>
-      <section>
-        <h2>Speisepilze aus Berlin</h2>
-        <p>
-          Bilder und Texte folgen. Willkommen auf unserer neuen Webseite! Hier finden Sie bald alles rund um unsere frisch
-          gezüchteten Speisepilze aus regionalem Anbau.
-        </p>
-      </section>
+      <h2>Frische Speisepilze aus Berlin – Direkt vom Anbieter</h2>
+      <p>
+        Entdecke die Vielfalt unserer hochwertigen Speisepilze. Frisch, regional und sorgfältig ausgewählt für dich.
+      </p>
+
+      <div class="feature-grid" role="list">
+        <article class="feature-card" role="listitem" tabindex="0">
+          <h3>Qualität & Frische</h3>
+          <p>Nur handverlesene Pilze mit bester Qualität direkt aus Berlin.</p>
+        </article>
+        <article class="feature-card" role="listitem" tabindex="0">
+          <h3>Breites Sortiment</h3>
+          <p>Von Champignons bis Steinpilzen – alles, was Pilzliebhaber lieben.</p>
+        </article>
+        <article class="feature-card" role="listitem" tabindex="0">
+          <h3>Einfache Bestellung</h3>
+          <p>Praktischer Online-Shop mit schneller Lieferung.</p>
+        </article>
+        <article class="feature-card" role="listitem" tabindex="0">
+          <h3>Persönlicher Service</h3>
+          <p>Bei Fragen helfen wir dir direkt und persönlich weiter.</p>
+        </article>
+      </div>
     </main>
 
     <footer class="fuss">
@@ -43,8 +60,8 @@
 
   <script>
     const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('de', options);
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    document.getElementById("currentDate").textContent = currentDate.toLocaleDateString("de", options);
   </script>
 </body>
 

@@ -2,10 +2,14 @@
 <html lang="de">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Kontakt</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Speisepilze - Kontakt</title>
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/kontakt.css" />
@@ -17,27 +21,27 @@
       <h1>Kontakt</h1>
     </header>
 
-    <nav class="navi">
+    <nav class="navi" role="navigation" aria-label="Hauptnavigation">
       <ul>
         <li><a href="index.html">Startseite</a></li>
         <li><a href="sortiment.html">Sortiment</a></li>
-         <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="platzhalter.html">Reservieren</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
         <li><a href="shop.html">Shop</a></li>
       </ul>
     </nav>
 
     <main>
       <h2>Kontaktformular</h2>
-      <form action="mailto:deine-email@beispiel.de" method="post" enctype="text/plain">
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="Name" required /><br /><br />
 
-        <label for="email">E-Mail:</label><br />
-        <input type="email" id="email" name="E-Mail" required /><br /><br />
+      <form action="#" method="post" class="kontakt-formular" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Dein Name" />
 
-        <label for="nachricht">Nachricht:</label><br />
-        <textarea id="nachricht" name="Nachricht" rows="5" required></textarea><br /><br />
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required placeholder="deine@mail.de" />
+
+        <label for="nachricht">Nachricht:</label>
+        <textarea id="nachricht" name="nachricht" rows="5" required placeholder="Deine Nachricht"></textarea>
 
         <button type="submit">Absenden</button>
       </form>
@@ -50,8 +54,8 @@
 
   <script>
     const currentDate = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('de', options);
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    document.getElementById("currentDate").textContent = currentDate.toLocaleDateString("de", options);
   </script>
 </body>
 
