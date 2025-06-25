@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sortiment</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/sortiment.css" />
+</head>
+
+<body>
+  <div id="holder">
+    <header>
+      <h1><b>Sortiment</b></h1>
+    </header>
+
+    <nav class="navi">
+      <ul>
+        <li><a href="index.html">Startseite</a></li>
+        <li><a href="sortiment.html">Sortiment</a></li>
+        <li><a href="#">Platzhalter</a></li>
+        <li><a href="#">Platzhalter</a></li>
+        <li><a href="#">Platzhalter</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Alle Speisepilze auf einen Blick</h2>
+      <div class="table-container">
+        <table class="produkttabelle">
+          <thead>
+            <tr>
+              <th>Bild</th>
+              <th>Name</th>
+              <th>Gattung</th>
+              <th>Preis pro Gramm</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://via.placeholder.com/100" alt="Champignons"></td>
+              <td>Champignons</td>
+              <td>Agaricus</td>
+              <td>0,007 €</td>
+            </tr>
+            <tr>
+              <td><img src="https://via.placeholder.com/100" alt="Steinpilze"></td>
+              <td>Steinpilze</td>
+              <td>Boletus</td>
+              <td>0,032 €</td>
+            </tr>
+            <tr>
+              <td><img src="https://via.placeholder.com/100" alt="Austernpilze"></td>
+              <td>Austernpilze</td>
+              <td>Pleurotus</td>
+              <td>0,009 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="fuss">
+      &copy; Speisepilze Hecke GmbH, <span id="currentDate"></span>
+    </footer>
+  </div>
+
+  <script>
+    const currentDate = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('currentDate').textContent = currentDate.toLocaleDateString('de', options);
+  </script>
+</body>
+
+</html>
