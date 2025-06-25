@@ -1,36 +1,48 @@
-.table-container {
-  overflow-x: auto;
-  margin-top: 1.5rem;
-}
-
 .produkttabelle {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  border-radius: 0.5rem;
-  overflow: hidden;
+  margin: 1rem 0;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+.produkttabelle thead {
+  background-color: #dbe9f4;
 }
 
 .produkttabelle th,
 .produkttabelle td {
-  padding: 1rem;
+  border: 1px solid #bbb;
+  padding: 0.6rem 1rem;
   text-align: left;
-  border-bottom: 1px solid #ddd;
-  vertical-align: top;
+  vertical-align: middle;
+  border-radius: 6px;
 }
 
 .produkttabelle th {
-  background-color: #91c9c0;
-  color: #fff;
-  font-weight: bold;
+  color: #2a4d69;
+  font-weight: 600;
 }
 
-.produkttabelle tr:hover {
-  background-color: #f4f4f4;
+.produkttabelle tbody tr:nth-child(even) {
+  background-color: #f7fbff;
+}
+
+.produkttabelle tbody tr:hover {
+  background-color: #e0f0ff;
 }
 
 .produkttabelle img {
   max-width: 100px;
-  border-radius: 0.3rem;
+  height: auto;
+  border-radius: 6px;
+}
+
+.produkttabelle a {
+  color: #2a7ae2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.produkttabelle a:hover {
+  text-decoration: underline;
 }
