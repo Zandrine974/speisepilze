@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
 
+:root {
+  --main-color: #556b2f;
+  --accent-color: #c07a00;
+  --background-light: #f9f6f1;
+  --background-box: #fff;
+  --hover-bg: #f4ead7;
+  --shadow: rgba(75, 58, 44, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
-  background-color: #f9f6f1;
+  background-color: var(--background-light);
   color: #3b2f2f;
   margin: 0;
   padding: 0;
@@ -10,11 +23,11 @@ body {
 
 #holder {
   max-width: 960px;
-  margin: 2.5rem auto 3rem;
-  padding: 1rem 2rem 3rem;
-  background-color: #fff;
+  margin: 2rem auto;
+  padding: 1rem 1rem 3rem;
+  background-color: var(--background-box);
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(75, 58, 44, 0.1);
+  box-shadow: 0 6px 20px var(--shadow);
   display: flex;
   flex-direction: column;
   min-height: 80vh;
@@ -23,29 +36,26 @@ body {
 header {
   text-align: center;
   padding-bottom: 1.5rem;
-  border-bottom: 2px solid #c07a00;
+  border-bottom: 2px solid var(--accent-color);
   user-select: none;
 }
 
 header h1 {
   font-weight: 800;
-  font-size: 3rem;
-  letter-spacing: 0.15em;
-  color: #556b2f;
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  color: var(--main-color);
   margin: 0;
 }
 
-/* Navigation */
 nav.navi ul {
   display: flex;
   justify-content: center;
-  gap: 3rem; /* Abstand zwischen den Nav-Buttons */
+  gap: 2rem;
   padding-left: 0;
   margin: 1.5rem auto 2rem;
   list-style: none;
-  flex-wrap: nowrap; /* Keine Zeilenumbrüche, alle in einer Reihe */
-  max-width: 700px;
-  user-select: none;
+  flex-wrap: wrap;
 }
 
 nav.navi li {
@@ -57,7 +67,7 @@ nav.navi a {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
-  color: #556b2f;
+  color: var(--main-color);
   padding: 0.5rem 1rem;
   border-radius: 12px;
   border: 2px solid transparent;
@@ -67,8 +77,8 @@ nav.navi a {
 nav.navi a:hover,
 nav.navi a:focus,
 nav.navi a[aria-current="page"] {
-  border-color: #c07a00;
-  background-color: #f4ead7;
+  border-color: var(--accent-color);
+  background-color: var(--hover-bg);
   outline: none;
 }
 
@@ -80,7 +90,7 @@ main {
 
 main h2 {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
   color: #3b2f2f;
 }
@@ -89,37 +99,37 @@ main p {
   max-width: 650px;
   margin: 0 auto 2rem;
   line-height: 1.6;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #5a4d3b;
 }
 
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .feature-card {
-  background-color: #f4ead7;
+  background-color: var(--hover-bg);
   border-radius: 18px;
-  padding: 1.8rem 1.6rem;
+  padding: 1.6rem 1.4rem;
   box-shadow: 0 4px 12px rgba(85, 107, 47, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(85, 107, 47, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(85, 107, 47, 0.25);
 }
 
 .feature-card h3 {
   margin-top: 0;
   margin-bottom: 0.7rem;
   font-weight: 700;
-  font-size: 1.3rem;
-  color: #556b2f;
+  font-size: 1.2rem;
+  color: var(--main-color);
 }
 
 .feature-card p {
@@ -134,4 +144,29 @@ footer.fuss {
   font-size: 0.9rem;
   color: #7b6c56;
   user-select: none;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav.navi ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav.navi a {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  main h2 {
+    font-size: 1.6rem;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
 }
